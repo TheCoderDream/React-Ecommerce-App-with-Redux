@@ -1,0 +1,58 @@
+.product {
+  padding-bottom: 2rem;
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    flex: 0 0 40%;
+  }
+
+  &__link {
+    flex: 0 0 60%;
+    height: 60%;
+    padding: 1rem;
+    position: relative;
+  }
+
+  &__title {
+    font-size: .8rem;
+  }
+
+  &__price {
+
+  }
+
+  &__description {
+    font-size: 0.7rem;
+  }
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+  }
+
+  &__add-to-cart {
+    position: absolute;
+    bottom: .8rem;
+    width: 60%;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: all .2s;
+    padding: 3px 12px;
+
+  }
+
+  &:hover &__add-to-cart {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:hover .owl-dots {
+    display: inline-block;
+  }
+
+}
+

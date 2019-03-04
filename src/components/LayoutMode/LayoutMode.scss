@@ -1,0 +1,38 @@
+.layout-mode {
+
+  display: flex;
+  flex-direction: row;
+  padding: .3rem;
+  border: 2px solid gray;
+  cursor: pointer;
+
+  &__item {
+    width: .7rem;
+    height: .7rem;
+    background-color: gray;
+
+    &--active {
+      background-color: dodgerblue;
+    }
+
+  }
+
+  &__item:not(:last-child) {
+    margin-right: .3rem;
+  }
+
+  &:not(:last-child) {
+    margin-right: .8rem;
+  }
+
+
+
+
+  &:hover {
+    border: 2px solid #646464;
+  }
+
+  &--active {
+    border: 2px solid dodgerblue;
+  }
+}
