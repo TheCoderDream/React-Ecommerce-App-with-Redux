@@ -25,7 +25,16 @@ const Product = (props) => {
 
 
     const handleImageChange = (e) => {
-        const currentX = e.clientX - cumulativeOffSet(imageRef.current).left;
+
+        let  clientX;
+
+        if(e.type === 'touchmove') {
+            clientX = e.touches[0].clientX;
+        } else {
+            clientX = e.clientX;
+        }
+
+        const currentX = clientX - cumulativeOffSet(imageRef.current).left;
 
         // console.dir(imageRef.current);
 
@@ -59,6 +68,8 @@ const Product = (props) => {
             <Link to={`/products/${id}`} className="product__link"><img
                 onMouseMove={handleImageChange}
                 onMouseOut={handleMouseOut}
+                onTouchMove={handleImageChange}
+                onTouchEnd={handleMouseOut}
                 className="card-img-top product__img" src={img} alt={title} ref={imageRef}/>
                 <SlideDots len={images.length} activeItem={aItem} changeItem={changeImage}/>
             </Link>
