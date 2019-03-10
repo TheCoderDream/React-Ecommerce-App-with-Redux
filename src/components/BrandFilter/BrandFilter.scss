@@ -45,3 +45,14 @@
     opacity: 1;
   }
 }
+
+.flex-50 {
+  flex: 0 0 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .flex-50 {
+    flex: 0 0 50%;
+  }
+}

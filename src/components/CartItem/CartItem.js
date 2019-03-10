@@ -52,18 +52,18 @@ const CartItem = (
 
 
     return (
-        <div className="row">
+        <div className="row align-items-center mb-3">
             <div className="col-12 col-sm-12 col-md-2 text-center">
-                <img className="img-responsive" src={img} alt="prewiew" width="120"
-                     height="80" />
+                <img className="img-responsive" src={img} style={{height: '60%', width: '60%'}} alt={description}
+                      />
             </div>
             <div className="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
                 <h4 className="product-name"><strong>{shortenTitle(title)}</strong></h4>
                 <h4>
-                    <small>{description}</small>
+                    <small className="product-description">{description}</small>
                 </h4>
             </div>
-            <div className="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+            <div className="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row product-quantity-container">
                 <div className="col-3 col-sm-3 col-md-6 text-md-right" style={{paddingTop: '5px'}}>
                     <h6><strong>{formatMoney(price)}$ <span className="text-muted">x</span></strong></h6>
                 </div>

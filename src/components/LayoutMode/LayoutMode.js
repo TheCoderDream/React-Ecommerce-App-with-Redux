@@ -13,7 +13,7 @@ const LayoutMode = (
 
     let classess = 'layout-mode__item';
 
-    if(len === +isActive) {
+    if(isActive) {
         classess += ' layout-mode__item--active'
     }
 

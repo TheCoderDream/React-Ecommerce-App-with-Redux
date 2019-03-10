@@ -56,3 +56,16 @@
 
 }
 
+@media only screen and (max-width: 768px) {
+  .product {
+    height: auto !important;
+    &__add-to-cart {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    & .owl-dots {
+      display: inline-block;
+    }
+  }
+}

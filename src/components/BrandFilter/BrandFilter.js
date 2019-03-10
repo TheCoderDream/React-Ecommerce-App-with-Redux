@@ -25,9 +25,9 @@ const BrandFilter = (props) => {
                 <div className="card-header">
                     <h3>Brands</h3>
                 </div>
-                <ul className="list-group">
+                <ul className="list-group flex-row flex-wrap">
                     {brands.map(brand => (
-                        <li className="list-group-item">
+                        <li className="list-group-item flex-50">
                             <label className="custom-checkbox text-capitalize"> {brand} ({brandItemsCount[brand]})
                                 <input type="checkbox"
                                        name={brand}

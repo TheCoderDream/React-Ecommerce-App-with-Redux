@@ -65,3 +65,18 @@
 .shopping-cart {
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  .product-name {
+    font-size: 1rem;
+    margin-top: .5rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .product-quantity-container {
+    margin-top: .5rem;
+  }
+}

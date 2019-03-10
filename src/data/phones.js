@@ -1,7 +1,7 @@
 export const phones = [{
     "title": "Apple iPhone 7 Plus 32 GB (Apple Türkiye Garantili)",
     "category": "phone",
-    "images": ["https://productimages.hepsiburada.net/s/18/135/9801259057202.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258663986.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258696754.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258729522.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258762290.jpg?v1"],
+    "images": ["https://productimages.hepsiburada.net/s/18/280-413/9801258663986.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258696754.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258729522.jpg?v1", "https://productimages.hepsiburada.net/s/18/280-413/9801258762290.jpg?v1"],
     "brand": "apple",
     "price": 4241.499828399639,
     "cpu": "1.3GHz Apple A6",

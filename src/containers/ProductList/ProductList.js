@@ -15,11 +15,22 @@ class ProductList extends Component {
         perPage: 12,
         currentPage: 1,
         pagesToShow: 3,
+        gridValue: 3
     };
 
     changeLayout = (n) => {
+        this.setState({gridValue: n});
+
+        let realGridValue;
+
+        if(n === 4) {
+            realGridValue = 3
+        } else {
+            realGridValue = 4;
+        }
+
       this.setState({
-          colValue: `col-lg-${n}`
+          colValue: `col-lg-${realGridValue}`
       });
     };
 
@@ -53,12 +64,12 @@ class ProductList extends Component {
         return (
             <div className="col-lg-9">
                 <div className="row mb-3">
-                    <div className="col-12">
+                    <div className="col-12 d-none d-lg-block d-xl-block">
                         <div className="card ">
                             <div className="card-header d-flex justify-content-end">
                                 <span className="mr-3">Change Layout: </span>
-                                <LayoutMode len={3} isActive={isActive} click={this.changeLayout} />
-                                <LayoutMode len={4} isActive={isActive}  click={this.changeLayout} />
+                                <LayoutMode len={3} isActive={this.state.gridValue === 3} click={this.changeLayout} />
+                                <LayoutMode len={4} isActive={this.state.gridValue === 4}  click={this.changeLayout} />
                             </div>
                         </div>
                     </div>
@@ -88,7 +99,6 @@ class ProductList extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log('orderby');
     const brands = state.brandFilter;
     const orderBy = state.orderBy;
 

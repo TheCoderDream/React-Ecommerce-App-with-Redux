@@ -3,15 +3,12 @@ import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 
 const Header = ({cartLength}) => {
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container">
                 <NavLink className="navbar-brand" to="/">Ecommerce</NavLink>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
+                <div>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <NavLink className="nav-link" to={"/cart"}><i className="fa fa-shopping-cart mr-2"
@@ -23,6 +20,7 @@ const Header = ({cartLength}) => {
         </nav>
     );
 };
+
 
 const mapStateToProps = (state) => {
   return {
